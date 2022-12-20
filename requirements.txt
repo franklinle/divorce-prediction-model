@@ -4,7 +4,9 @@ certifi==2021.10.8
 charset-normalizer==2.0.11
 contourpy==1.0.6
 cycler==0.11.0
+dj-database-url==1.2.0
 Django==4.0.1
+django-heroku==0.3.1
 fonttools==4.38.0
 idna==3.3
 joblib==1.2.0
@@ -16,6 +18,8 @@ numpy==1.24.0
 packaging==22.0
 pandas==1.5.2
 Pillow==9.3.0
+psycopg2==2.9.5
+psycopg2-binary==2.9.5
 pyparsing==3.0.9
 python-dateutil==2.8.2
 pytz==2022.7
