@@ -17,6 +17,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn import metrics
 from django.conf import settings
 import os
+from django.contrib.staticfiles.templatetags.staticfiles import static
+
 
 
 # In[285]:
@@ -24,7 +26,7 @@ import os
 
 # Load the data into a pandas DataFrame
 # https://www.kaggle.com/datasets/andrewmvd/divorce-prediction
-csv_file_path = os.path.join(settings.STATICFILES_DIRS[0], 'divorce_data.csv')
+csv_file_path = os.path.join(STATICFILES_DIRS[0], 'divorce_data.csv')
 
 df = pd.read_csv(csv_file_path, delimiter=';')
 
