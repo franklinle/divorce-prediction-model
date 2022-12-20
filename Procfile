@@ -1,1 +1,1 @@
-web: gunicorn divorceConfig.wsgi --log-file -
+web: gunicorn divorceConfig.wsgi:application --log-file -
