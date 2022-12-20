@@ -1,0 +1,79 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+<head>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body data-result = "{{ prediction_result }}">
+    <!-- content of the webpage -->
+    <form method="post" action="{% url 'prediction_form' %}">
+        <!-- {{ form.as_p }} -->
+        {% csrf_token %}
+        <h1>Divorce Prediction</h1>
+        <h2>Using Data from 170 Marriages</h2>
+        <h3>Gathering the 10 Most Important Questions</h3>
+    
+    
+        <p>{{ prediction_result }}</p>
+    
+        <div class="form-row">
+            <div class="form-group col-6">
+              <label for="input1">My spouse and I have similar ideas about how marriage should be.</label>
+              {{ form.input1 }}
+            </div>
+            <div class="form-group col-6">
+              <label for="input2">My spouse and I have similar ideas about how roles should be in marriage.</label>
+              {{ form.input2 }}
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label for="input3">I like my spouse's way of opening a subject.</label>
+              {{ form.input3 }}
+            </div>
+            <div class="form-group col-6">
+              <label for="input4">I know exactly what my spouse likes.</label>
+              {{ form.input4 }}
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label for="input5">I know how my spouse wants to be taken care of when she/he sick.</label>
+              {{ form.input5 }}
+            </div>
+            <div class="form-group col-6">
+              <label for="input6">I know my spouse's favorite food.</label>
+              {{ form.input6 }}
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label for="input7">I have knowledge of my spouse's inner world.</label>
+              {{ form.input7 }}
+            </div>
+            <div class="form-group col-6">
+              <label for="input8">I know my spouse's hopes and wishes.</label>
+              {{ form.input8 }}
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label for="input9">I know what's going on when we start a discussion.</label>
+              {{ form.input9 }}
+            </div>
+            <div class="form-group col-6">
+              <label for="input10">My spouse and I have similar values in trust.</label>
+              {{ form.input10 }}
+            </div>
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+
+
+
