@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_protect
 from .divorce import lr_predict_churn
 from .forms import MyForm
 
+@csrf_protect
 def prediction_form(request):
     # Use the form in your view logic
     form = MyForm()
