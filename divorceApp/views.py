@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.views.decorators.csrf import csrf_protect
 from .divorce import lr_predict_churn
 from .forms import MyForm
 
